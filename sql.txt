@@ -1,0 +1,40 @@
+connect 'jdbc:derby:net://localhost:1527/DEALER;create=true:user=dealer;password=dealer;';
+
+drop table vehicles_steinbach;
+create table vehicles_steinbach (make varchar(50),
+                                 model varchar(50),
+                                 yyear varchar(4),
+                                 price integer,
+                                 feature_desc varchar(512));
+
+drop table vehicles_pinefalls;
+create table vehicles_pinefalls (make varchar(50),
+                                 model varchar(50),
+                                 yyear varchar(4),
+                                 price integer,
+                                 feature_desc varchar(512));
+
+drop table vehicles_selkirk;
+create table vehicles_selkirk   (make varchar(50),
+                                 model varchar(50),
+                                 yyear varchar(4),
+                                 price integer,
+                                 feature_desc varchar(512));
+
+insert into vehicles_steinbach values ('Chrysler', 'Crossfire', '2005', 19999, 'Air conditioning, power windows'),
+                                      ('Chrysler', 'Sebring',   '2003', 14999, 'Convertible'),
+                                      ('Dodge',    'Viper',     '2006', 89999, 'loaded'),
+                                      ('Chrysler', '300',       '2003', 18999, 'Leather seats'),
+                                      ('Dodge',    'Durango',   '2004', 23999, 'Supercharged engine');
+
+insert into vehicles_pinefalls values ('Toyota', 'Camry',  '2001', 13999, 'Power steering'),
+                                      ('Toyota', 'Tacoma', '2002', 16999, 'Power seats'),
+                                      ('Lexus',  'LS',     '2003', 26999, 'Built in GPS'),
+                                      ('Toyota', 'Prius',  '2004', 29999, 'Built in TV and DVD player'),
+                                      ('Lexus',  'GS',     '2005', 34999, '10 CD changer');
+
+insert into vehicles_selkirk   values ('Saturn', 'Vue',   '2004', 15999, 'Power locks'),
+                                      ('Saturn', 'Ion',   '2005', 12499, 'Reliable'),
+                                      ('Saturn', 'Sky',   '2006', 19999, 'Convertible, must see!'),
+                                      ('Saturn', 'Relay', '2004', 14999, 'Very roomy'),
+                                      ('Saturn', 'L300',  '2001',  9999, 'Chrome wheels');
